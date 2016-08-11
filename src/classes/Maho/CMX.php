@@ -47,6 +47,7 @@
 		public function processRequest ($request)
 		{
 			if($this->validateSecret()) {
+
 				$data = json_decode(file_get_contents($request), true);
 				$this->_processRequest($data);
 			}
@@ -87,7 +88,7 @@
 
 		public function processRequest($request)
 		{
-			$rows = $request->rows;
+			$rows = $request->observations;
 			
 			foreach($rows as $row) {
 				$this->_insertRecord($row, $request);
