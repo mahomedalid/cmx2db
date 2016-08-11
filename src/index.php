@@ -16,6 +16,7 @@
 		$response = $cmx->response();
 	} else {
 		$response = $validator;
+		$cmx->enable();
 	}
 
 
