@@ -4,19 +4,20 @@
 
 	use Maho;
 
-	$secret = "";
-	$validator = "";
+	$secret = "09r32jof0fks!";
+	$validator = "84285536a7284a388b296c06644d273a74f11953";
 
 	$options = array ("secret" => $secret, "validator" => $validator);
 
 	$cmx = new \Maho\CMX($secret, $validator);
 
 	if($cmx->isEnabled()) {
-		
+		$response = $cmx->response();
 	} else {
-		$cmx->validateSecret();
+		$response = $validator;
 	}
 
-	echo $cmx->response();
+
+	echo $response;
 	die ();
 
