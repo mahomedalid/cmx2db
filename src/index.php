@@ -12,6 +12,7 @@
 	$cmx = new \Maho\CMX($secret, $validator);
 
 	if($cmx->isEnabled()) {
+		$cmx->processRequest("php://input");
 		$response = $cmx->response();
 	} else {
 		$response = $validator;
