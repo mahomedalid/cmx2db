@@ -63,6 +63,16 @@
 		protected $_columns = array ("apMac", "apTags", "apFloors", "clientMac", "ipv4", "ipv6", "seenTime", "seemEpoch", "ssid", "rssi", "manufacturer", 
 						"os", "lat", "lng", "unc");
 
+		/* TABLE SQL 
+		 CREATE TABLE cmx_records 
+			(id INT NOT NULL AUTO_INCREMENT, 
+			apMac VARCHAR(99), apTags VARCHAR(99), apFloors VARCHAR(99), 
+			clientMac VARCHAR(99), ipv4 VARCHAR(99), ipv6 VARCHAR(99), 
+			seenTime VARCHAR(99), seemEpoch INTEGER, ssid VARCHAR(99), 
+			rssi INTEGER, manufacturer VARCHAR(99), os VARCHAR(99), 
+			lat DECIMAL, lng DECIMAL, unc DECIMAL, 
+			PRIMARY KEY(id));
+		*/
 		protected $_connectionString = "mysql:host=localhost;dbname=cmx";
 		protected $_connectionUser = "root";
 		protected $_connectionPassword = "";
