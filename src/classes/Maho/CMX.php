@@ -29,6 +29,12 @@
 			return file_exists("data/".$hash);
 		}
 
+		public function enable ()
+                {
+                        $hash = md5($this->_validator).".val";
+                        file_put_contents("data/".$hash, $this->_secret);
+                }
+
 		public function validateSecret ()
 		{
 			return TRUE;
